@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue練習</title>
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+</head>
+<body>
+    <!-- 
+        初識Vue：
+            1. 想讓Vue工作，就必須創建一個Vue實例，且要傳入一個配置物件；
+            2. root容器裡的程式碼依然符合html規範，只不過混入了一些特殊的Vue語法；
+            3. root容器裡的程式碼被稱為【Vue模板】；
+            4. Vue實例和容器是一一對應的；
+            5. 真實開發中只有一個Vue實例，並且會配合著元件一起使用；
+            6. {{xxx}}中的xxx要寫js表達式，且xxx可以自動讀取到data中的所有屬性；
+            7. 一旦data中的資料發生改變，那麼頁面中用到該資料的地方也會自動更新；
+
+            注意區分：js表達式和js程式碼（語句）
+                1. 表達式：一個表達式會產生一個值，可以放在任何一個需要值的地方：
+                    (1). a
+                    (2). a+b
+                    (3). demo(1)
+                    (4). x === y ? 'a' : 'b'
+
+                2. js程式碼（語句）
+                    (1). if(){}
+                    (2). for(){}
+
+
+     -->
+
+    <!-- 準備好一個容器 -->
+    <div id="root">
+        <h1>Hello, {{name.toUpperCase()}}, {{address}}</h1>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+
+        //創建Vue實例
+        new Vue({
+            el:'#root', //el用於指定當前Vue實例為哪個容器服務，值通常為CSS選擇器字串。
+            data:{ //data中用於儲存資料，資料供el所指定的容器去使用，值我們暫時先寫成一個物件。
+                name:'Henry',
+                address:'臺北大安'
+            }
+        });
+    </script>
+
+</body>
+</html>
