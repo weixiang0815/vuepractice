@@ -37,16 +37,16 @@
     <div id="root">
         <h1>Hello, {{name.toUpperCase()}}, {{address}}</h1>
     </div>
-    
+
     <script type="text/javascript">
         Vue.config.productionTip = false;
 
         //創建Vue實例
         new Vue({
-            el:'#root', //el用於指定當前Vue實例為哪個容器服務，值通常為CSS選擇器字串。
-            data:{ //data中用於儲存資料，資料供el所指定的容器去使用，值我們暫時先寫成一個物件。
-                name:'Henry',
-                address:'臺北大安'
+            el: '#root', //el用於指定當前Vue實例為哪個容器服務，值通常為CSS選擇器字串。
+            data: { //data中用於儲存資料，資料供el所指定的容器去使用，值我們暫時先寫成一個物件。
+                name: 'Henry',
+                address: '臺北大安'
             }
         });
     </script>
